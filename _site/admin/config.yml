@@ -1,0 +1,56 @@
+local_backend: true
+backend:
+  name: bitbucket
+  repo: sterlinggryphwear/sterlinggryph-content
+  branch: main
+  app_id: HPmg9pVsCfr6R45mUB
+  auth_type: implicit
+media_folder: "_images/uploads"
+public_folder: "_images/uploads"
+site_url: http://localhost:8080/
+display_url: http://localhost:8080/admin
+collections:
+  - name: pages
+    label: "Pages"
+    create: true
+    folder: "_pages"
+    slug: "{{slug}}"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown
+      - label: Layout
+        name: layout
+        widget: hidden
+        default: "base.njk"
+  - name: settings
+    label: "Settings"
+    delete: false
+    editor:
+      preview: false
+    files: 
+      - name: general
+        label: "Site settings"
+        file: "_data/settings.json"
+        fields: 
+          - label: "Site title"
+            name: "site_title"
+            widget: string
+          - label: "Descripton"
+            name: "meta_description"
+            widget: string
+          - label: "Keywords"
+            name: "meta_keywords"
+            widget: list
+            hint: "Keywords people can use to find your site, separated by commas."
+          - label: "Author"
+            name: "author"
+            widget: object
+            fields:
+              - { label: "Name", name: "author_name", widget: string }
+              - { label: "E-mail", name: "author_email", widget: string }
+              - { label: "Avatar", name: "author_avatar", widget: image }
+          
