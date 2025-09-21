@@ -1,5 +1,4 @@
 node_modules
-content
 _site/*
 !_site/admin
 .ignore_me

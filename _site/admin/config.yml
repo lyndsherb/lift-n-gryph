@@ -4,7 +4,7 @@ backend:
   repo: lyndsherb/bug-free-tribble
   app_id: Ov23licn2As6L6l4F86u
 media_folder: "_images/uploads"
-public_folder: "_images/uploads"
+public_folder: "http://localhost:8080/_images/uploads"
 site_url: http://localhost:8080/
 display_url: http://localhost:8080/admin
 collections:
