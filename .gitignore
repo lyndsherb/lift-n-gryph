@@ -1,6 +1,5 @@
-composer.phar
-vendor
 node_modules
 _content/**/*
 _site/*
 !_site/admin
+.ignore_me

@@ -1,10 +1,8 @@
 local_backend: true
 backend:
-  name: bitbucket
-  repo: sterlinggryphwear/sterlinggryph-content
-  branch: main
-  app_id: HPmg9pVsCfr6R45mUB
-  auth_type: implicit
+  name: github
+  repo: lyndsherb/bug-free-tribble
+  app_id: Ov23licn2As6L6l4F86u
 media_folder: "_images/uploads"
 public_folder: "_images/uploads"
 site_url: http://localhost:8080/
