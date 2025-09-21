@@ -1,5 +1,5 @@
 node_modules
-_content/**/*
+content/*
 _site/*
 !_site/admin
 .ignore_me
