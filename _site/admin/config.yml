@@ -10,6 +10,7 @@ display_url: http://localhost:8080/admin
 collections:
   - name: pages
     label: "Pages"
+    label_singular: "Page"
     create: true
     folder: "_pages"
     slug: "{{slug}}"
@@ -24,6 +25,42 @@ collections:
         name: layout
         widget: hidden
         default: "base.njk"
+  - name: homepage
+    label: "Homepage"
+    delete: false
+    files: 
+      - name: banner
+        label: "Homepage banner"
+        file: "_partials/homepage-banner.md"
+        fields: 
+          - label: "Banner image"
+            name: banner_image
+            widget: image
+          - label: "Banner text"
+            name: body
+            widget: markdown
+          - label: "Banner button"
+            name: banner_btn
+            widget: object
+            fields: 
+              - { label: "Button text", name: banner_btn_text, widget: string }
+              - { label: "Button link", name: banner_btn_link, widget: string }
+  - name: services
+    label: "Services"
+    label_singular: "Service"
+    folder: "_partials/services"
+    collection: "services"
+    create: true
+    fields: 
+      - label: "Image"
+        name: service_image
+        widget: image
+      - label: "Title"
+        name: title
+        widget: text
+      - label: "Text"
+        name: body
+        widget: markdown
   - name: settings
     label: "Settings"
     delete: false
@@ -51,4 +88,3 @@ collections:
               - { label: "Name", name: "author_name", widget: string }
               - { label: "E-mail", name: "author_email", widget: string }
               - { label: "Avatar", name: "author_avatar", widget: image }
-          
